@@ -1,0 +1,6 @@
+name = GSB Rethink
+description = Provides a form for Rethink mailing list sign-up
+core = 7.x
+package = GSB
+
+
