@@ -45,7 +45,7 @@ function gsb_rethink_insights_signup_submit_callback($form, &$form_state) {
   $email = $form_state['values']['email'];
 
   if (mailchimp_is_subscribed($list_id, $email)) {
-    $message = '<div class="signup-text">' . t('Thank you! You have previously signed up. If you are not receiving Re:Think, !link.' .'</div>', array('!link' => l('update your settings', 'http://google.com')));
+    $message = '<div class="signup-text">' . t('Thank you! You have previously signed up. If you are not receiving our email, !link.' .'</div>', array('!link' => l('update your settings', 'http://google.com')));
   }
   else {
     $result = mailchimp_subscribe($list_id, $email, $mergevars = NULL, $double_id = TRUE, $send_welcome = TRUE);
